@@ -72,7 +72,10 @@ export default {
     const defaultDate = this.defaultDate ? DatesUtils.parseDate(this.defaultDate) : DatesUtils.getToday()
     return {
       currentMonthMonth: defaultDate.getMonth(),
-      currentMonthYear: defaultDate.getFullYear()
+      currentMonthYear: defaultDate.getFullYear(),
+      customClasses: {},
+      showWeeksNumber: false,
+      defaultDate: '',
     }
   },
 

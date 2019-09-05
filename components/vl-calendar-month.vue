@@ -70,6 +70,12 @@ export default {
       default: 'en',
     }
   },
+  data () {
+    return {
+      daysNames: [],
+      showWeeksNumber: false,
+    }
+  },
 
   computed: {
     monthName () {
