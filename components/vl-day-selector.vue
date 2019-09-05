@@ -8,6 +8,7 @@
     :default-date="defaultDate"
     :single-month="singleMonth"
     :first-day-of-week="firstDayOfWeek"
+    :lang="lang"
     ref="calendar"
   />
 </template>
@@ -36,6 +37,10 @@ export default {
       type: String,
       validator: v =>  DAYS_SHORTCUTS.includes(v),
       default: 'mon'
+    },
+    lang: {
+      type: String,
+      default: 'en',
     }
   },
 

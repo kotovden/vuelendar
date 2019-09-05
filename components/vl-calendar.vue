@@ -19,6 +19,7 @@
       :custom-classes="customClasses"
       :show-weeks-number="showWeeksNumber"
       :first-day-of-week="firstDayOfWeek"
+      :lang="lang"
       @input="date => $emit('input', date)"
     />
 
@@ -32,6 +33,7 @@
       :custom-classes="customClasses"
       :show-weeks-number="showWeeksNumber"
       :first-day-of-week="firstDayOfWeek"
+      :lang="lang"
       @input="date => $emit('input', date)"
     />
   </div>
@@ -59,6 +61,10 @@ export default {
       type: String,
       validator: v =>  DAYS_SHORTCUTS.includes(v),
       default: 'mon'
+    },
+    lang: {
+      type: String,
+      default: 'en',
     }
   },
 
