@@ -64,12 +64,16 @@ export default {
       type: String,
       validator: v =>  DAYS_SHORTCUTS.includes(v),
       default: 'mon'
+    },
+    lang: {
+      type: String,
+      default: 'en',
     }
   },
 
   computed: {
     monthName () {
-      return getMonthName(this.month)
+      return getMonthName(this.month, this.lang)
     },
 
     days () {

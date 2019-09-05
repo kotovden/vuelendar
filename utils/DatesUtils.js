@@ -43,19 +43,37 @@ export function getWeekNumber (date) {
   return Math.ceil(((date - yearStart) / oneDayInMs + 1) / 7)
 }
 
-export function getMonthName (month) {
-  return [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ][month]
+export function getMonthName (month, lang = 'en') {
+ switch (lang) {
+   case 'en':
+     return [
+       'January',
+       'February',
+       'March',
+       'April',
+       'May',
+       'June',
+       'July',
+       'August',
+       'September',
+       'October',
+       'November',
+       'December'
+     ][month];
+   case 'ru':
+     return [
+       'Январь',
+       'Февраль',
+       'Март',
+       'Апрель',
+       'Май',
+       'Июнь',
+       'Июль',
+       'Август',
+       'Сентябрь',
+       'Октябрь',
+       'Ноябрь',
+       'Декабрь'
+     ][month];
+ }
 }
